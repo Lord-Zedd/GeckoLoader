@@ -34,6 +34,12 @@ namespace GeckoLoader
 				return;
 			}
 
+			if ((bool)chkPause.IsChecked)
+			{
+				game.Write(0x4039D6, new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 }); //lost focus
+				game.Write(0x403FF7, new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90 }); //menu bar gained focus
+			}
+
 			if ((bool)chkDebugOptions.IsChecked)
 			{
 				byte[] asm = new byte[] { 0x68, 0xFF, 0xFF, 0, 0 };

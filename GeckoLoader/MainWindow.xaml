@@ -31,6 +31,8 @@
 				<TextBlock TextWrapping="Wrap" Margin="4,0,0,0" FontSize="11" Text="Restores the &quot;Show VRAM&quot; and &quot;Show Framerate&quot; options in the menu bar."/>
 				
 
+				<CheckBox x:Name="chkPause" Content="Disable Auto-Pause"/>
+				<TextBlock TextWrapping="Wrap" Margin="4,0,0,0" FontSize="11" Text="Prevents the game from pausing itself when window focus is lost."/>
 			</StackPanel>
 		</GroupBox>
 		<TextBlock Text="By Zeddikins" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,0,4,4"/>
