@@ -37,9 +37,9 @@ namespace GeckoLoader
 			if ((bool)chkDebugOptions.IsChecked)
 			{
 				byte[] asm = new byte[] { 0x68, 0xFF, 0xFF, 0, 0 };
-				//game.Write(0x406151, asm); //unknown option
-				//game.Write(0x406170, asm); //show functions (no effect)
-				//game.Write(0x40617E, asm); //show debug info (print calls are stubbed)
+				//game.Write(0x406151, asm); //help>search for help (deprecated and not debug)
+				game.Write(0x406170, asm); //show functions (no effect)
+				game.Write(0x40617E, asm); //show debug info
 				game.Write(0x40618C, asm); //show vram
 				game.Write(0x40619a, asm); //show framerate
 			}
