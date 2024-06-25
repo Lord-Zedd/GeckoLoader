@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeckoLoader"
         mc:Ignorable="d"
-        Title="GEX GeckoLoader" Height="330" Width="430" ResizeMode="NoResize" WindowStyle="ToolWindow">
+        Title="GEX GeckoLoader" Height="450" Width="600" ResizeMode="NoResize" WindowStyle="ToolWindow">
     <Grid Margin="4">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
@@ -17,25 +17,41 @@
 		</Grid.ColumnDefinitions>
 		<GroupBox Header="Options" Grid.ColumnSpan="2" Margin="0,0,0,4">
 			<StackPanel>
-				<CheckBox x:Name="chkLevelSelect" Content="Expanded Level Select" IsChecked="True"/>
-				<TextBlock TextWrapping="Wrap" Margin="4,0,0,0" FontSize="11">
-					Replaces the original level select options with an expanded list containing previously hidden levels seen on the 3DO version. Affects both the title screen (partyatroswell) and map screen (hoosierbuddy) cheats.
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Version:" VerticalAlignment="Center"/>
+					<ComboBox x:Name="cmbGame" SelectedIndex="0" Margin="4,0,0,0" Width="200">
+						<ComboBoxItem Content="Final / GOG" />
+						<ComboBoxItem Content="July Beta" />
+					</ComboBox>
+				</StackPanel>
+				<TextBlock TextWrapping="Wrap" Margin="4,0,0,4" FontSize="11">
+					-The Beta build requires 16-bit color compatibility mode to be set on the game for graphics to appear correctly.
 					<LineBreak/>
+					-Some cheat strings are also different, refer to the included cheats.txt for the full list.
 					<LineBreak/>
-					Levels beginning with * were previously unavailable with the default level selects.
-					<LineBreak/>
-					<LineBreak/>
-					Some * levels may randomly crash on load, it is best to mash Jump to skip the intro sequence.
+					-Extra changes like skipping missing video dialogs and preventing a modern PC halt are also applied to the beta.
 				</TextBlock>
-				<CheckBox x:Name="chkDebugOptions" Content="Enable Debug Options"/>
-				<TextBlock TextWrapping="Wrap" Margin="4,0,0,0" FontSize="11" Text="Restores the &quot;Show VRAM&quot; and &quot;Show Framerate&quot; options in the menu bar."/>
+				<CheckBox x:Name="chkLevelSelect" Content="Expanded Level Select" IsChecked="True"/>
+				<TextBlock TextWrapping="Wrap" Margin="4,0,0,4" FontSize="11">
+					-Replaces the original level select options with an expanded list containing previously hidden levels seen on the 3DO version. Affects both the title screen and map screen cheats.
+					<LineBreak/>
+					-Levels beginning with * were previously unavailable with the default level selects; some may crash on load unless you mash Jump to skip the intro sequence.
+				</TextBlock>
 				
-
 				<CheckBox x:Name="chkPause" Content="Disable Auto-Pause"/>
-				<TextBlock TextWrapping="Wrap" Margin="4,0,0,0" FontSize="11" Text="Prevents the game from pausing itself when window focus is lost."/>
+				<TextBlock TextWrapping="Wrap" Margin="4,0,0,4" FontSize="11" Text="Prevents the game from pausing itself when window focus is lost."/>
+				
+				<CheckBox x:Name="chkDebugOptions" Content="Enable Debug Options"/>
+				<TextBlock TextWrapping="Wrap" Margin="4,0,0,4" FontSize="11" Text="Restores disabled options in the menu bar. &quot;Show Debug Info&quot; requires a debugger to be attached to view."/>
+
+				<CheckBox x:Name="chkDebugOut" Content="Print Debug Text To Output" Margin="8,0,0,0"/>
+				<TextBlock TextWrapping="Wrap" Margin="12,0,0,4" FontSize="11" Text="Replaces the stubbed print function with one to write to the same output as the &quot;Show Debug Info&quot; menu option, allowing for a lot more info to be shown. (Must have the above option enabled!)"/>
+
+				<CheckBox x:Name="chkDebugOutSpam" Content="Disable Frame Print Spam" Margin="16,0,0,0"/>
+				<TextBlock TextWrapping="Wrap" Margin="20,0,0,4" FontSize="11" Text="There are a handfull of meaningless prints that happen every frame, this will disable them as to not spam the window. (Must have the above options enabled!)"/>
 			</StackPanel>
 		</GroupBox>
-		<TextBlock Text="By Zeddikins" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,0,4,4"/>
+		<TextBlock Text="By Zeddikins" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,0,4,8"/>
 		<Button Content="Play" Height="32" Grid.Row="1" Grid.Column="0" Margin="0,0,2,0" Click="Button_Click"/>
 		<Button Content="Exit" Height="32" Grid.Row="1" Grid.Column="1" Margin="2,0,0,0" Click="Button_Click_1"/>
 	</Grid>

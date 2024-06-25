@@ -1,0 +1,51 @@
+From Map Screen: (Remote Menu must be open!)
+
+	Unlock All On Current Map
+		Final:	sofakingdom
+		Beta:	tedturner
+
+	Level Select (Affected by loader option)
+		Final:	hoosierbuddy
+		Beta:	hoosierbuddy
+
+
+From Inside Level: (Game must be paused!)
+
+	Give 99 Lives
+		Final:	iwillneverdiebungholio
+		Beta:	iwillneverdiebungholio
+
+	Give Fire Powerup
+		Final:	secondhandsmoke
+		Beta:	theman
+
+	Give Ice Powerup
+		Final:	ihaveshrinkage
+		Beta:	mrfreeze
+
+	Give Electricity Powerup
+		Final:	thentherewaslight
+		Beta:	shockthemonkey
+
+	Give Speed Powerup
+		Final:	grandenonwalter
+		Beta:	golikeflojo
+
+	Give Jump Powerup
+		Final:	itsagasgasgas
+		Beta:	superflymcdaddy
+
+	Give Invincible Powerup
+		Final:	drunkenmaster
+		Beta:	drunkenmaster
+
+
+From Title Screen:
+
+	Play Bonus Credits
+		Final:	imaloserbaby
+		Beta:	imalooserbabysowhydontyoukillme
+
+	Planet X Level Select (Affected by loader option)
+		Final:	partyatroswell
+		Beta:	planninefromouterspace
